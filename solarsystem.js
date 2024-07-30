@@ -15,27 +15,40 @@ const solarSystem = [
     ];
     
     // 1. Print the array of Jupiter's moons to the console (no for loop, just print the entire array).
+    console.log(solarSystem[4].moons);
     
     
     // 2. Print the name of Neptune's moon "Nereid" to the console.
+    console.log(solarSystem[-1].moons[-1]);
     
     
     // 3. Add a new moon called "Endor" to Venus' moons array.
+    solarSystem[1].moons.push("Endor");
     
     
     // 4. Add a Pluto object to the solarSystem array using .push. The object should contain Pluto's name, ringSystem boolean, and moons array (which includes "Charon").
+    let pluto = {name: "Pluto", ringSystem: false, moons :["Charon"]};
+    solarSystem.push(pluto);
     
     
     // 5. Add a new key-value pair to the the Earth object: the key should be 'diameter', and the value should be Earth's diameter in miles represented as a string.
+    solarSystem[2].diameter = "7,917.5 mi";
     
     
     // 6. Change Mercury's ringSystem boolean to true.
+    solarSystem[0].ringSystem = true;
     
     
     // 7. Change Uranus' moon "Umbriel" to "Oberon"
+    solarSystem[6].moons[-1] = "Oberon";
     
     
     // 8. Iterate through the solarSystem array and print only the objects that have a ringSystem (where ringSystem: true), and ignore the others.
+    solarSystem.forEach((planet) =>{
+        if(planet.ringSystem){
+            console.log(planet);
+        }
+    })
     
     
     //////////////////////////////
